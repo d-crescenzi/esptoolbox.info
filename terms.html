@@ -1,27 +1,103 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Termini - EspToolbox</title>
+  <title>Terms - EspToolbox</title>
   <style>
+    :root {
+      --bg: #14121C;
+      --surface: #1D1B26;
+      --surface-2: #262330;
+      --primary: #D0BCFF;
+      --on-primary: #381E72;
+      --accent: #EFB8C8;
+      --text: #E7E0EC;
+      --muted: #CAC4D0;
+      --outline: #49454F;
+    }
+    * { box-sizing: border-box; }
     body {
-      background-color: #121C36;
-      color: #E4E6EC;
-      font-family: sans-serif;
-      padding: 2rem;
+      margin: 0;
+      background: radial-gradient(circle at 20% -10%, #2A2340 0%, var(--bg) 55%);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
     }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .back:hover { text-decoration: underline; }
     h1 {
-      color: #FBCF84;
+      margin: 0 0 0.5rem;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    a {
-      color: #A4D0FF;
+    .updated {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0 0 2rem;
     }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--outline);
+      border-radius: 20px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h2 {
+      margin: 0 0 0.6rem;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+    .card p, .card li {
+      margin: 0.4rem 0;
+      color: var(--muted);
+    }
+    ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
   </style>
 </head>
 <body>
-  <h1>Termini e Condizioni</h1>
-  <p>L'app è fornita "così com'è", senza garanzie. L'uso è a proprio rischio. EspToolbox è pensata solo per dispositivi ESP compatibili.</p>
-  <p><a href="index.html">← Torna alla home</a></p>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Back to home</a>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="updated">Last updated: July 2026</p>
+
+    <div class="card">
+      <h2>Use of the app</h2>
+      <p>EspToolbox is intended solely for configuring compatible ESP32 and ESP8266 devices. Use with other devices is not supported.</p>
+    </div>
+
+    <div class="card">
+      <h2>No warranty</h2>
+      <p>The app is provided "as is", without warranties of any kind, express or implied, regarding operation, compatibility or fitness for a particular purpose.</p>
+    </div>
+
+    <div class="card">
+      <h2>Limitation of liability</h2>
+      <p>Use of the app is at your own risk. The developer is not liable for any damage to devices, boards or data resulting from the use of EspToolbox.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes</h2>
+      <p>These terms may be updated over time. Continued use of the app implies acceptance of the most recent version.</p>
+    </div>
+  </div>
 </body>
 </html>

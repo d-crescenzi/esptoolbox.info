@@ -1,34 +1,152 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EspToolbox</title>
   <style>
+    :root {
+      --bg: #14121C;
+      --surface: #1D1B26;
+      --surface-2: #262330;
+      --primary: #D0BCFF;
+      --on-primary: #381E72;
+      --accent: #EFB8C8;
+      --text: #E7E0EC;
+      --muted: #CAC4D0;
+      --outline: #49454F;
+    }
+    * { box-sizing: border-box; }
     body {
-      background-color: #121C36;
-      color: #E4E6EC;
-      font-family: sans-serif;
-      padding: 2rem;
+      margin: 0;
+      background: radial-gradient(circle at 20% -10%, #2A2340 0%, var(--bg) 55%);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    header {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--outline);
+      border-radius: 28px;
+      margin-bottom: 2.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--primary);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
     }
     h1 {
-      color: #FBCF84;
+      margin: 0 0 0.75rem;
+      font-size: 2.6rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    a {
-      color: #A4D0FF;
+    .lead {
+      margin: 0 auto;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--outline);
+      border-radius: 20px;
+      padding: 1.5rem;
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.15rem;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--on-primary);
+      font-weight: 600;
       text-decoration: none;
+      transition: opacity 0.15s ease;
     }
-    a:hover {
-      text-decoration: underline;
+    .chip.ghost {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--outline);
+    }
+    .chip:hover { opacity: 0.85; }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
-  <h1>EspToolbox</h1>
-  <p>App Android per configurare facilmente schede ESP32 / ESP8266 via USB.</p>
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Termini e Condizioni</a></li>
-  </ul>
+  <div class="wrap">
+    <header>
+      <span class="badge">ESP32 &middot; ESP8266</span>
+      <h1>EspToolbox</h1>
+      <p class="lead">Android app to configure your ESP boards in a simple and fast way, directly over USB.</p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h3>USB connection</h3>
+        <p>Plug the board into your phone and get started right away, with no drivers or complicated setup.</p>
+      </div>
+      <div class="card">
+        <h3>Quick configuration</h3>
+        <p>Set your ESP parameters and options with just a few taps from the interface.</p>
+      </div>
+      <div class="card">
+        <h3>Fully local</h3>
+        <p>No account, no cloud. Your data stays on your device.</p>
+      </div>
+    </section>
+
+    <div class="links">
+      <a class="chip ghost" href="privacy.html">Privacy Policy</a>
+      <a class="chip ghost" href="terms.html">Terms &amp; Conditions</a>
+    </div>
+
+    <footer>&copy; 2026 EspToolbox</footer>
+  </div>
 </body>
 </html>
