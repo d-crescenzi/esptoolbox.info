@@ -4,30 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy - EspToolbox</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #14121C;
-      --surface: #1D1B26;
-      --surface-2: #262330;
-      --primary: #D0BCFF;
-      --on-primary: #381E72;
-      --accent: #EFB8C8;
-      --text: #E7E0EC;
-      --muted: #CAC4D0;
-      --outline: #49454F;
+      --bg: #FEF7FF;
+      --surface: #E6E0E9;
+      --surface-2: #F3EDF7;
+      --primary: #00677C;
+      --on-primary: #FFFFFF;
+      --primary-container: #B2EBF8;
+      --on-primary-container: #001F28;
+      --text: #1D1B20;
+      --muted: #49454F;
+      --outline: #CAC4D0;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: radial-gradient(circle at 20% -10%, #2A2340 0%, var(--bg) 55%);
+      background: var(--bg);
       color: var(--text);
-      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      font-family: "Google Sans Flex", "Google Sans", "Roboto Flex", Roboto, system-ui, sans-serif;
       line-height: 1.65;
       min-height: 100vh;
     }
     .wrap {
       max-width: 760px;
-      margin: 0 auto;
+      margin: 0;
       padding: 3rem 1.5rem 4rem;
     }
     .back {
@@ -37,17 +42,16 @@
       color: var(--primary);
       text-decoration: none;
       font-size: 0.9rem;
+      font-weight: 500;
       margin-bottom: 1.5rem;
     }
     .back:hover { text-decoration: underline; }
     h1 {
       margin: 0 0 0.5rem;
       font-size: 2.2rem;
-      letter-spacing: -0.02em;
-      background: linear-gradient(120deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--text);
     }
     .updated {
       color: var(--muted);
@@ -56,15 +60,15 @@
     }
     .card {
       background: var(--surface);
-      border: 1px solid var(--outline);
       border-radius: 20px;
       padding: 1.5rem 1.75rem;
       margin-bottom: 1.25rem;
     }
     .card h2 {
       margin: 0 0 0.6rem;
-      color: var(--primary);
-      font-size: 1.2rem;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 500;
     }
     .card p, .card li {
       margin: 0.4rem 0;
