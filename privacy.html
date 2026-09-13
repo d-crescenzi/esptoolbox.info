@@ -10,70 +10,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #FEF7FF;
-      --surface: #E6E0E9;
-      --surface-2: #F3EDF7;
-      --primary: #00677C;
-      --on-primary: #FFFFFF;
-      --primary-container: #B2EBF8;
-      --on-primary-container: #001F28;
-      --text: #1D1B20;
-      --muted: #49454F;
-      --outline: #CAC4D0;
+      --bg: #000000;
+      --surface: #0D0D0D;
+      --surface-2: #141414;
+      --border: #262626;
+      --border-strong: #3D3D3D;
+      --primary: #FFFFFF;
+      --on-primary: #000000;
+      --text: #FFFFFF;
+      --muted: #A3A3A3;
+      --faint: #8A8A8A;
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: "Google Sans Flex", "Google Sans", "Roboto Flex", Roboto, system-ui, sans-serif;
+      font-family: "Roboto Flex", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
       line-height: 1.65;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
     .wrap {
       max-width: 760px;
-      margin: 0;
+      margin: 0 auto;
       padding: 3rem 1.5rem 4rem;
     }
     .back {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      color: var(--primary);
+      color: var(--muted);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      transition: color 0.15s ease;
     }
-    .back:hover { text-decoration: underline; }
+    .back:hover, .back:focus-visible { color: var(--text); }
     h1 {
       margin: 0 0 0.5rem;
-      font-size: 2.2rem;
-      font-weight: 400;
-      letter-spacing: 0;
+      font-size: clamp(2rem, 6vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
       color: var(--text);
     }
     .updated {
-      color: var(--muted);
+      color: var(--faint);
       font-size: 0.85rem;
-      margin: 0 0 2rem;
+      margin: 0 0 2.5rem;
     }
     .card {
       background: var(--surface);
-      border-radius: 20px;
-      padding: 1.5rem 1.75rem;
-      margin-bottom: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 0.9rem;
     }
     .card h2 {
-      margin: 0 0 0.6rem;
+      margin: 0 0 0.5rem;
       color: var(--text);
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
     }
     .card p, .card li {
       margin: 0.4rem 0;
       color: var(--muted);
     }
+    .card p:first-of-type { margin-top: 0; }
+    .card p:last-child { margin-bottom: 0; }
     ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
   </style>
 </head>
